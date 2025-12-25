@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+// O Entity transforma uma classe em uma entidade do BD!
 @Entity
 @Table(name = "tb_cadastro")
 @Data // getters and setters
@@ -19,6 +20,8 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+
+    @Column(unique = true)
     private String email;
     private int idade;
 
@@ -30,9 +33,3 @@ public class NinjaModel {
 
 
 }
-
-// O Entity transforma uma classe em uma entidade do BD!
-
-
-
-
